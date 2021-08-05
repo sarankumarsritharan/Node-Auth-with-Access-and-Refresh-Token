@@ -1,19 +1,35 @@
 ##
-GET http://localhost:3000
-
-
+GET http://localhost:3000  
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2Mjc4ODgyMzAsImV4cCI6MTYyNzg4ODI0NSwiYXVkIjoiNjEwNzhlMjMxZDAyZTY3MjVjNjg4YzU5IiwiaXNzIjoicGxhdHouY29tIn0.gGvjJPDciM2qhLq--EMddx0eunsbZ6LN8o2-UHBsiPI
 ###login route
 
 POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+   "email":"vatchala@gmail.com",
+   "password":"1234"
+}
+
 
 ###register route
 
 POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+   "email":"vatchala@gmail.com", 
+    "password":"1234"
+}
+
 
 ###refresh-token route
 
 POST http://localhost:3000/auth/refresh-token
+Content-Type: application/json
 
+{
+   "refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2Mjc4ODgyMzAsImV4cCI6MTY1OTQ0NTgzMCwiYXVkIjoiNjEwNzhlMjMxZDAyZTY3MjVjNjg4YzU5IiwiaXNzIjoicGxhdHouY29tIn0.-8zWJGPQ3q78eKbe-dWqNbpN3ixuD-NtiEFV11fVyYc"
 ###logout route
 
 DELETE  http://localhost:3000/auth/logout
